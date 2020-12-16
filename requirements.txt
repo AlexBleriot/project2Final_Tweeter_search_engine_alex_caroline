@@ -1,0 +1,6 @@
+flask
+gensim
+nltk
+joblib
+numpy
+pandas
