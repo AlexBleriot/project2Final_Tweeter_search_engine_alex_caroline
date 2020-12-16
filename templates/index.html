@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> Twitter Search Application </title>
+  <meta name="description" content="Twitter Search Application">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+h1 {
+  font-size: 2.5em;
+  color: DodgerBlue;
+  font-family: "Times New Roman", Times, serif;
+  
+}
+
+
+label{
+  font-size: 1.5em;
+  color: DodgerBlue;
+  font-family: "Times New Roman", Times, serif;
+}
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+
+</style>
+</head>
+
+<body>
+ <nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Twitter search engine</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li>
+			</ul>
+			
+		</div>
+	</nav>
+
+
+  <center>
+<form method="POST" action="#">
+  <label>Search</label> 
+  <input  name="search" id="search">
+  <input type="submit" value="submit">
+</form>
+<br> <br>
+  </center> 
+  {% if tweets %}
+	  <div class="container">
+      <p> Result for <strong>{{ inputvalue }}</strong></p>
+          <br> <br>
+	  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Similarity score</th>
+        <th>Tweet</th>
+      </tr>
+    </thead>
+	<tbody>
+	 {% for i in rank %}
+      <tr>
+         <td style="font-size:0.875em;font-family: Courier New;">{{rank[i-1]}}</td>
+        <td style="font-size:0.875em;font-family: Courier New;>{{ i }}</td>
+        <td style="font-size:0.875em;font-family: Courier New;>{{scores[i-1]}}</td>
+        <td style="font-size:0.875em;font-family: Courier New;">{{tweets[i-1]}}</td>
+      </tr>
+	  {% endfor %}
+    
+    </tbody>
+  </table>
+ </div>
+ {% endif %}
+<br> <br>
+<footer class="navbar-fixed-bottom">
+	<div class="container">
+		<small>
+		copyright @2020 ---Design By Alex and Caroline --- Data Engineering project Efrei Paris---
+		</small>
+	</div>
+</footer>
+</body>
+</html>
