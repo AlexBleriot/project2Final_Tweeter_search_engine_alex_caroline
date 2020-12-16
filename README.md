@@ -6,8 +6,6 @@ As a part of the curriculum of the Master 2 (M2) course entitled “Data Enginee
 
 The following sections provide necessary information about the description of the application  to be created.
 
-For any further detail, please contact the instructor: **Khodor Hammoud**
-
 # User Stories
 * The application is a Twitter search application, where the user inputs a search string, and the application returns the top 20 tweets which are similar to the search string.
 * The text language used must be English
