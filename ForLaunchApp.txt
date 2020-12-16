@@ -1,0 +1,4 @@
+#step 1
+docker build -t="alex/twitter_search_engine:1.0" .
+#step 2
+docker run -d -p 5000:5000 --name my_twitter_search alex/twitter_search_engine:1.0
