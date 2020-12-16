@@ -23,8 +23,6 @@ class FlaskTest(unittest.TestCase):
 
         response = requests.post('http://localhost:5000', data=payload)
         self.assertEqual(response.status_code, 200)
-        # vérifier que le retour au niveau du tableau de rank contient id du tweet c'est à dire 200
-        # self.assertEqual(response.content,'id')
 
     def test_c_check_if_app_can_handle_1000request_per_minute(self):
         # verifier si l'app peut traiter 1000 requete par minute
