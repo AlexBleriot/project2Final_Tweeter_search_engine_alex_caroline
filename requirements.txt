@@ -4,3 +4,4 @@ nltk
 joblib
 numpy
 pandas
+prometheus-client
